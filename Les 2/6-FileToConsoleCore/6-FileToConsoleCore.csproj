@@ -1,0 +1,11 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>_6_FileToConsoleCore</RootNamespace>
+    <UseWindowsForms>true</UseWindowsForms>
+    <StartupObject>ConsoleToFile.Program</StartupObject>
+  </PropertyGroup>
+
+</Project>

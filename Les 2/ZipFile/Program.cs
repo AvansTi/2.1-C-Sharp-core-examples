@@ -16,9 +16,11 @@ namespace ZipFileDemo {
             var myDocuments = Environment.SpecialFolder.MyDocuments;
             string myDocFolder = Environment.GetFolderPath(myDocuments);
 
-            OpenFileDialog browseFileDialog = new OpenFileDialog();
-            browseFileDialog.InitialDirectory = myDocFolder;
-            browseFileDialog.Title = "Select a zip file...";
+            OpenFileDialog browseFileDialog = new OpenFileDialog
+            {
+                InitialDirectory = myDocFolder,
+                Title = "Select a zip file..."
+            };
 
             string sourceZipFile, destFolder;
             if (browseFileDialog.ShowDialog() != DialogResult.OK) {
@@ -26,9 +28,11 @@ namespace ZipFileDemo {
             }
             sourceZipFile = browseFileDialog.FileName;
 
-            FolderBrowserDialog destFolderDialog = new FolderBrowserDialog();
-            destFolderDialog.Description = "Select folder to extract *.cs files";
-            destFolderDialog.RootFolder = myDocuments;
+            FolderBrowserDialog destFolderDialog = new FolderBrowserDialog
+            {
+                Description = "Select folder to extract *.cs files",
+                RootFolder = myDocuments
+            };
             if (destFolderDialog.ShowDialog() != DialogResult.OK) {
                 return 0;
             }

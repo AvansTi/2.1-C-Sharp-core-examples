@@ -20,6 +20,17 @@ namespace FractionOperators
             Fraction c = new Fraction(2, 3);
             Fraction d = new Fraction(3, 2);
 
+            Fraction e = new Fraction(0, 1);
+
+            if (e)
+            {
+                Console.WriteLine("Valid fraction");
+            } else
+            {
+                Console.WriteLine("Invalid fraction");
+              
+            }
+
             Console.WriteLine($"De breuk ({d}) + ({a} * {b} + {c})) heeft als resultaat:");
             Console.WriteLine($"{(d + (a * b + c))}");
             Console.WriteLine("Expliciete cast naar double: {0}",(double)(d + (a * b + c)));

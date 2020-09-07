@@ -28,6 +28,18 @@ namespace FractionOperators
         }
 
 
+        // Overloaod of true false
+        public static bool operator true(Fraction f)
+        {
+            return f.den > 0 && f.num > 0;
+        }
+
+        public static bool operator false(Fraction f)
+        {
+            return f.den == 0 || f.num == 0;
+        }
+
+
         // user-defined conversion from Fraction to double
         //  In general, implicit conversion operators should:
         //	- never throw exceptions and 

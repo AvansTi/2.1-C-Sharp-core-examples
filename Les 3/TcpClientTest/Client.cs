@@ -1,4 +1,4 @@
-﻿#define USE_DELIMETER
+﻿//#define USE_DELIMETER
 
 using System;
 using System.Text;
@@ -11,6 +11,7 @@ namespace TcpClientTest
 {
     class Program {
         static void Main(string[] args) {
+            NetworkUtils.NetworkUtils.SayHello();
             TcpClient client = new TcpClient("127.0.0.1", 1330);
             NetworkStream networkStream = client.GetStream();
 

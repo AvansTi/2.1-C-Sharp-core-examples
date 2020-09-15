@@ -1,4 +1,4 @@
-﻿#define USE_DELIMITER
+﻿//#define USE_DELIMITER
 
 using System;
 using System.Net.Sockets;
@@ -7,11 +7,15 @@ using System.Text;
 using System.Threading;
 using System.IO;
 using ClientServer;
+using NetworkUtils;
 
 namespace TcpServer
 {
     class Program {
         static void Main(string[] args) {
+
+
+            NetworkUtils.NetworkUtils.SayHello();
             IPAddress localhost; //= IPAddress.Parse("127.0.0.1");
 
             bool ipIsOk = IPAddress.TryParse("127.0.0.1", out localhost);

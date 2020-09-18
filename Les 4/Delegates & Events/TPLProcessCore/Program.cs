@@ -1,18 +1,17 @@
 ﻿using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Diagnostics;
 using System.IO;
 using System.Threading;
 using System.Threading.Tasks;
-using System.Collections.Concurrent;
 
-namespace TPLTextProcess
+namespace TPLProcessCore
 {
+
     class Program
     {
-        static ConcurrentDictionary<char, UInt64> charCount = 
+        static ConcurrentDictionary<char, UInt64> charCount =
             new ConcurrentDictionary<char, UInt64>(2, 255);
 
         static ConcurrentDictionary<string, UInt64> wordCount =
@@ -20,7 +19,7 @@ namespace TPLTextProcess
 
         static void Main(string[] args)
         {
-            string[] inputFiles = 
+            string[] inputFiles =
             {
                 "decline1.txt", "decline2.txt", "decline3.txt",
                 "decline4.txt", "decline5.txt", "decline6.txt"
@@ -29,7 +28,7 @@ namespace TPLTextProcess
             Stopwatch watch = new Stopwatch();
             Console.WriteLine("Iterative");
             watch.Start();
-            
+
             foreach (string file in inputFiles)
             {
                 string content = File.ReadAllText(file);
@@ -47,11 +46,11 @@ namespace TPLTextProcess
             Console.WriteLine();
             Console.WriteLine("Parallel");
             watch.Start();
-            foreach(string file in inputFiles)
+            foreach (string file in inputFiles)
             {
                 string content = File.ReadAllText(file);
-                Parallel.Invoke( 
-                    () => CountCharacters(content), 
+                Parallel.Invoke(
+                    () => CountCharacters(content),
                     () => CountWords(content)
                     );
             }
@@ -73,7 +72,7 @@ namespace TPLTextProcess
                 {
                     ++charCount[c];
                 }
-                else 
+                else
                 {
                     charCount[c] = 1;
                 }
@@ -94,7 +93,7 @@ namespace TPLTextProcess
                     splitChars.Add((char)c);
                 }
             }
-            string[] words = content.Split(splitChars.ToArray<char>(), StringSplitOptions.RemoveEmptyEntries);
+            string[] words = content.Split(splitChars.ToArray(), StringSplitOptions.RemoveEmptyEntries);
             foreach (string word in words)
             {
                 if (wordCount.ContainsKey(word))

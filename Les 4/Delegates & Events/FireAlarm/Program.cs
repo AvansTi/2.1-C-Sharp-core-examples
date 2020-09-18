@@ -2,6 +2,7 @@
 
 // FireEventArgs: a custom event inherited from EventArgs.
 
+/*
 public class FireEventArgs : EventArgs
 {
     public FireEventArgs(string room, int ferocity)
@@ -79,6 +80,7 @@ class FireHandlerClass
             Console.WriteLine("The fire in the {0} is out of control.  I'm calling the fire department!", fe.Room);
     }
 }	//end of class FireHandlerClass
+*/
 
 public class FireEventTest
 {
@@ -87,7 +89,7 @@ public class FireEventTest
 
         // Create an instance of the class that will be firing an event.
 
-        FireAlarm myFireAlarm = new FireAlarm();
+        /*FireAlarm myFireAlarm = new FireAlarm();
 
         // Create an instance of the class that will be handling the event. Note that 
         // it receives the class that will fire the event as a parameter. 
@@ -99,7 +101,7 @@ public class FireEventTest
         myFireAlarm.ActivateFireAlarm("Study", 1);
         myFireAlarm.ActivateFireAlarm("Porch", 5);
         Console.ReadLine();
-        return;
+        return;*/
 
     }	//end of main
 

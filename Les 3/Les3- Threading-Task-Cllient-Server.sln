@@ -19,13 +19,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestPred", "TestFind\TestPr
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TcpPackageLength", "TcpPackageLength\TcpPackageLength.csproj", "{87D90E98-361C-467E-9F2A-5870EA1A26F1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleTCPServer", "SimpleTCPServer\SimpleTCPServer.csproj", "{EEFE6208-A544-416C-88AA-B76258DA7C92}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleTCPServer", "SimpleTCPServer\SimpleTCPServer.csproj", "{EEFE6208-A544-416C-88AA-B76258DA7C92}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleTCPClient", "SimpleTCPClient\SimpleTCPClient.csproj", "{809338A7-0A82-4304-9EC9-F6647E9F8FA6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleTCPClient", "SimpleTCPClient\SimpleTCPClient.csproj", "{809338A7-0A82-4304-9EC9-F6647E9F8FA6}"
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		NetworkUtils\NetworkUtils.projitems*{61170a09-e586-413b-9a3a-4899e0b1d901}*SharedItemsImports = 5
 		ShareClientServer\ShareClientServer.projitems*{61170a09-e586-413b-9a3a-4899e0b1d901}*SharedItemsImports = 5
+		NetworkUtils\NetworkUtils.projitems*{dfc0ccb1-3324-417f-8910-f5faaee6b4b4}*SharedItemsImports = 5
 		ShareClientServer\ShareClientServer.projitems*{dfc0ccb1-3324-417f-8910-f5faaee6b4b4}*SharedItemsImports = 5
 		ShareClientServer\ShareClientServer.projitems*{ef98354b-d9f8-4613-8e5a-01e8f47156df}*SharedItemsImports = 13
 	EndGlobalSection

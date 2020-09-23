@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29215.179
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PatientDatabase", "PatientDatabase\PatientDatabase.csproj", "{C5DE0039-0D94-4C7C-B429-A100566CE0CC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PatientDatabaseTests", "PatientDatabaseTests\PatientDatabaseTests.csproj", "{257D2FE0-E8A0-401E-ABF5-8ACE7D932464}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C5DE0039-0D94-4C7C-B429-A100566CE0CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5DE0039-0D94-4C7C-B429-A100566CE0CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5DE0039-0D94-4C7C-B429-A100566CE0CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5DE0039-0D94-4C7C-B429-A100566CE0CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{257D2FE0-E8A0-401E-ABF5-8ACE7D932464}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{257D2FE0-E8A0-401E-ABF5-8ACE7D932464}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{257D2FE0-E8A0-401E-ABF5-8ACE7D932464}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{257D2FE0-E8A0-401E-ABF5-8ACE7D932464}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5AA84D84-26BE-4564-BC58-8E6339AC2504}
+	EndGlobalSection
+EndGlobal

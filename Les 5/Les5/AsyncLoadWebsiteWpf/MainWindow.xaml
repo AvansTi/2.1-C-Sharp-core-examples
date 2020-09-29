@@ -6,7 +6,35 @@
         xmlns:local="clr-namespace:AsyncLoadWebsiteWpf"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
+    <StackPanel>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="120"/>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="200"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40"/>
+            </Grid.RowDefinitions>
 
-    </Grid>
+            <Label Content="Url:" Grid.Row="0" Grid.Column="0" />
+            <TextBox DataContext="{Binding Website}" Text="{Binding Path=Url, Mode=TwoWay}" Grid.Row="0" Grid.Column="1" />
+            <Label DataContext="{Binding Website}" Content="{Binding Path=ContentLength}" ContentStringFormat="Data length: {0}" Grid.Row="0" Grid.Column="2" />
+
+            <Button Content="No async" Command="{Binding Path=LoadNonAsyncCommand}" Grid.Column="0" Grid.Row="1" />
+            <Button Content="Async" Command="{Binding Path=LoadAsyncCommand}" Grid.Column="1" Grid.Row="1" />
+            <Button Content="Reset" Command="{Binding Path=ResetCommand}" Grid.Column="2" Grid.Row="1" />
+        </Grid>
+        <ListView ItemsSource="{Binding Websites, Mode=TwoWay}" SelectedItem="{Binding Website}" >
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Url" DisplayMemberBinding="{Binding Url}" Width="100"/>
+                    <GridViewColumn Header="Length" DisplayMemberBinding="{Binding ContentLength}" Width="100"/>
+                    <GridViewColumn Header="Load time" DisplayMemberBinding="{Binding LoadTime}" Width="100"/>
+                    <!--<GridViewColumn Header="Content" DisplayMemberBinding="{Binding Content}" Width="500"/>-->
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </StackPanel>
 </Window>

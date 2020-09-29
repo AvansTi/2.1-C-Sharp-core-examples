@@ -61,7 +61,12 @@ namespace WPFExample
                 {
                     mSaveDataCommand = new RelayCommand(
                         (dialogType) => {
-                            var dlgObj = Activator.CreateInstance(dialogType as Type) as IFileDialogWindow;
+                            var dialogTypes = dialogType as Type;
+                            IFileDialogWindow dlgObj;
+                            if (dialogTypes != null)
+                                dlgObj = Activator.CreateInstance(dialogType as Type) as IFileDialogWindow;
+                            else
+                                dlgObj = dialogType as IFileDialogWindow;
                             var fileNames = dlgObj?.ExecuteFileDialog(null, "JSON|*.json");
                             if (fileNames.Count > 0)
                             {

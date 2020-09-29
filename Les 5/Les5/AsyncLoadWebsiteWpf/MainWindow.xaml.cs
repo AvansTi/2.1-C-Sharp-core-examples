@@ -23,6 +23,7 @@ namespace AsyncLoadWebsiteWpf
         public MainWindow()
         {
             InitializeComponent();
+            this.DataContext = new WebsiteAsyncModelView();
         }
     }
 }

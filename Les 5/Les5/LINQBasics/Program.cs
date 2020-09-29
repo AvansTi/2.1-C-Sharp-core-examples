@@ -65,6 +65,9 @@ namespace LINQBasics
             where c.City == "London"
             select new { naam = c.Name, stad = c.City };
 
+            //var res = londoners.FirstOrDefault();
+            //Console.WriteLine(res);
+
             Console.WriteLine("Living in London");
             londoners.ToList().ForEach(n => { Console.WriteLine(n); });
             Console.WriteLine();

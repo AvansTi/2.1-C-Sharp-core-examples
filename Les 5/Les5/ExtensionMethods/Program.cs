@@ -42,7 +42,10 @@ namespace ExtensionMethods
 
             Console.WriteLine(words.Regels());
 
-            100.Times(() => Console.WriteLine("ik mag niet spieken"));
+            int x = 10;
+            x.Times(() => Console.WriteLine("Hallo klas"));
+
+            //100.Times(() => Console.WriteLine("ik mag niet spieken"));
 
         }
 

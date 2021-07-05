@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesvoorbeeld", "Lesvoorbeel
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExtensionMethods", "ExtensionMethods\ExtensionMethods.csproj", "{54FA1796-FEB2-4FBA-82D1-87E80504B72C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LingToEntities", "LingToEntities\LingToEntities.csproj", "{5966C3D1-98CB-43DA-9B85-A762B6E673AA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinqToEntities", "LinqToEntities\LinqToEntities.csproj", "{5966C3D1-98CB-43DA-9B85-A762B6E673AA}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LinqToBing", "LinqToBing\LinqToBing.csproj", "{A8526FAD-8A95-495A-B13C-3DD09EA0DD44}"
 EndProject

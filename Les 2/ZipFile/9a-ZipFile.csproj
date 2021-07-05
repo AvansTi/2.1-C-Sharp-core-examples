@@ -1,8 +1,9 @@
-﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>net5.0-windows</TargetFramework>
     <OutputType>Exe</OutputType>
     <UseWindowsForms>true</UseWindowsForms>
+    <StartupObject>ZipFileDemo.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Folder Include="Properties\" />

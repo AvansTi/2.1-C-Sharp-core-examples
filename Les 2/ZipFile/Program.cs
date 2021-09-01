@@ -1,13 +1,10 @@
 ﻿using System;
-using System.IO.Compression;
 using System.IO;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.IO.Compression;
 using System.Windows.Forms;
 
-namespace ZipFileDemo {
+namespace ZipFileDemo
+{
 
     class Program {
         [STAThread]

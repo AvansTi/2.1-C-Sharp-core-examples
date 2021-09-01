@@ -14,14 +14,12 @@ namespace RestApiDemo
             // Maak een api-key aan en plaats dit in apikey.txt (in dezelfde folder als de .exe)
             string currentPath = Directory.GetCurrentDirectory();
             string apikeyFile = Path.Combine(currentPath, "apikey.txt");
-            if (!File.Exists(apikeyFile) || apikeyFile.Length == 0)
-            {
+            if (!File.Exists(apikeyFile) || apikeyFile.Length == 0) {
                 Console.WriteLine("Maak een eigen apikey aan voor de openweathermap api en plaats in apikey.txt");
                 Console.WriteLine("Applicatie wordt afgesloten...");
                 Console.ReadKey();
                 Environment.Exit(0);
-            } else
-            {
+            } else {
                 apiKey = File.ReadAllText(apikeyFile);
             }
 
@@ -38,16 +36,14 @@ namespace RestApiDemo
             stream.Write(buffer, 0, buffer.Length);
 
             //lees de request:
-            StringBuilder message = new StringBuilder();
+            var message = new StringBuilder();
             int numberOfBytesRead = 0;
             byte[] receiveBuffer = new byte[1024];
 
             do
             {
                 numberOfBytesRead = stream.Read(receiveBuffer, 0, receiveBuffer.Length);
-
                 message.AppendFormat("{0}", Encoding.UTF8.GetString(receiveBuffer, 0, numberOfBytesRead));
-
             }
             while (stream.DataAvailable);
 

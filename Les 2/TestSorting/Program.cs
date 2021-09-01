@@ -1,14 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace TestSorting
+﻿namespace TestSorting
 {
     using System;
     using System.Collections.Generic;
-    using System.IO;
 
     class Student : IComparable<Student> {
         public int JaarInschrijving { get; set; }

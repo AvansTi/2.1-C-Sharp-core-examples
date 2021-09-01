@@ -22,11 +22,6 @@ namespace _8_WoningSerialization
             var jsonString = JsonSerializer.Serialize(woningen);
             File.WriteAllText("G:\\tmp\\woning.json", jsonString);
 
-
-
-
-
-
         }
     }
 

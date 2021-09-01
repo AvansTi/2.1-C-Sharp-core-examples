@@ -52,7 +52,7 @@ public class Test
 
 
 // A test object that needs to be serialized.
-[Serializable()]
+[Serializable]
 public class TestSimpleObject
 {
 
@@ -89,7 +89,7 @@ public class TestSimpleObject
     }
 }
 
-[Serializable()]
+[Serializable]
 public class Person {
     public string name { get; set; }
     public Person mother { get; set; }

@@ -1,15 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace FractionOperators
+﻿namespace FractionOperators
 {
-    class Fraction
+    public class Fraction
     {
 
-        int num, den;
+        private int num, den;
 
         public Fraction(int num, int den) {
             this.num = num;

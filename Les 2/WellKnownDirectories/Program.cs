@@ -11,8 +11,8 @@ namespace WellKnownDirectories
         {
             foreach (Environment.SpecialFolder folder in Enum.GetValues(typeof(Environment.SpecialFolder)))
             {
-                string path = Environment.GetFolderPath(folder);
-                Console.WriteLine("{0}\t==>\t{1}", folder, path);
+                var path = Environment.GetFolderPath(folder);
+                Console.WriteLine($"{folder}\t==>\t{path}");
             }
             Console.ReadKey();
         }

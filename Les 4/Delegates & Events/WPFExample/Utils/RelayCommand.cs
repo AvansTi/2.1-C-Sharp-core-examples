@@ -15,7 +15,7 @@ namespace WPFExample
 
         #endregion // Fields
 
-        #region Constructors
+         #region Constructors
 
         /// <summary>
         /// Creates a new command that can always execute.

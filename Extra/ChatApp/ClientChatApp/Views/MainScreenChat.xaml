@@ -1,0 +1,47 @@
+﻿<Window x:Class="Avans.TI.ChatApp.Client.Views.MainScreenChat"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Avans.TI.ChatApp.Client.Views"
+        mc:Ignorable="d"
+        Title="MainScreenChat" Height="450" Width="800">
+    <StackPanel>
+        <Menu>
+            <MenuItem Header="File">
+                <MenuItem Header="Test"></MenuItem>
+            </MenuItem>
+        </Menu>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="20*"/>
+                <ColumnDefinition Width="80*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*" />
+            </Grid.RowDefinitions>
+            <ListView Grid.Row="0" Grid.Column="0" ItemsSource="{Binding Users }">
+                <!--<ListViewItem>Test</ListViewItem>
+                <ListViewItem>Test</ListViewItem>
+                <ListViewItem>Test</ListViewItem>
+                <ListViewItem>Test</ListViewItem>
+                <ListViewItem>Test</ListViewItem>-->
+            </ListView>
+
+            <StackPanel Grid.Row="0" Grid.Column="1">
+                <ListView >
+                    <!--<ListViewItem>Test</ListViewItem>
+                    <ListViewItem>Test</ListViewItem>
+                    <ListViewItem>Test</ListViewItem>
+                    <ListViewItem>Test</ListViewItem>
+                    <ListViewItem>Test</ListViewItem>-->
+                </ListView>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Vul hier je text in" Width="500" />
+                    <Button Content="Send"  />
+                </StackPanel>
+                
+            </StackPanel>
+        </Grid>
+    </StackPanel>
+</Window>

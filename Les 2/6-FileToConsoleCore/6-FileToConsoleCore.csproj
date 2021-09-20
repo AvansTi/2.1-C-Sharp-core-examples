@@ -6,6 +6,7 @@
     <RootNamespace>_6_FileToConsoleCore</RootNamespace>
     <UseWindowsForms>true</UseWindowsForms>
     <StartupObject>ConsoleToFile.Program</StartupObject>
+      <DisableWinExeOutputInference>true</DisableWinExeOutputInference>
   </PropertyGroup>
 
 </Project>

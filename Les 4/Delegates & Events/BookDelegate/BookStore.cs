@@ -1,15 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-
-
-// A set of classes for handling a bookstore:
+﻿// A set of classes for handling a bookstore:
 namespace Bookstore
 {
-    using System.Collections;
+    using System.Collections.Generic;
 
     // Describes a book in the book list:
     public struct Book
@@ -35,7 +27,7 @@ namespace Bookstore
     public class BookDB
     {
         // List of all books in the database:
-        ArrayList list = new ArrayList();
+        IList<Book> list = new List<Book>();
 
         // Add a book to the database:
         public void AddBook(string title, string author, decimal price, bool paperBack)

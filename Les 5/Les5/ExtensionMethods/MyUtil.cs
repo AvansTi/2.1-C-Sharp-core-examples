@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ExtensionMethods
 {
@@ -31,8 +28,8 @@ namespace ExtensionMethods
         }
 
         static public void Times(this Int32 n, Action proc)
-	    {
-		    for (int i = 1; i <= n; i++)
+        {
+            for (int i = 1; i <= n; i++)
 			    proc();
 	    }
 

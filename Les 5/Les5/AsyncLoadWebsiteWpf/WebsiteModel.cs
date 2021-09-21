@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Text;
+﻿using System.ComponentModel;
 
 namespace AsyncLoadWebsiteWpf
 {
@@ -13,12 +10,7 @@ namespace AsyncLoadWebsiteWpf
 
         public string Content { get; set; } = "";
 
-        public int ContentLength { 
-            get
-            {
-                return Content.Length;
-            } 
-        }
+        public int ContentLength => Content.Length;
 
         public float LoadTime { get; set; } = 0.0f;
 

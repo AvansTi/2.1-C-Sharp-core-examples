@@ -1,14 +1,11 @@
 ﻿using AsyncAwaitBestPractices.MVVM;
-using System;
+using CommunityToolkit.Mvvm.Input;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Diagnostics;
 using System.Net;
-using System.Text;
 using System.Threading.Tasks;
-using System.Threading.Tasks.Dataflow;
-using System.Windows.Input;
 
 namespace AsyncLoadWebsiteWpf
 {
@@ -27,39 +24,37 @@ namespace AsyncLoadWebsiteWpf
             Init();
         }
 
-        public void Init()
+        public async Task Init()
         {
             Websites.Clear();
             Websites.Add(new WebsiteModel { Url = "http://www.nu.nl" });
             Websites.Add(new WebsiteModel { Url = "https://www.reddit.com" });
-            Websites.Add(new WebsiteModel { Url = "https://bb.avans.nl" });
+            Websites.Add(new WebsiteModel { Url = "https://brightspace.avans.nl" });
             Websites.Add(new WebsiteModel { Url = "https://github.com/avansti" });
             Websites.Add(new WebsiteModel { Url = "https://www.google.com" });
         }
 
-        private ICommand resetCommand;
-        public ICommand ResetCommand
+        private IAsyncRelayCommand resetCommand;
+        public IAsyncRelayCommand ResetCommand
         {
             get
             {
                 if (resetCommand == null)
-                    resetCommand = new RelayCommand((pm) => { Init(); });
+                    resetCommand = new AsyncRelayCommand(Init);
 
                 return resetCommand;
             }
         }
 
 
-        private ICommand loadNonAsyncCommand;
-        public ICommand LoadNonAsyncCommand
+        private IRelayCommand loadNonAsyncCommand;
+        public IRelayCommand LoadNonAsyncCommand
         {
             get
             {
                 if (loadNonAsyncCommand == null)
                 {
-                    loadNonAsyncCommand = new RelayCommand(
-                        p => { RunDownloadSync(); },
-                        p => { return true; });
+                    loadNonAsyncCommand = new RelayCommand(()=> { RunDownloadSync(); });
                 }
                 return loadNonAsyncCommand;
             }

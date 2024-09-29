@@ -28,7 +28,7 @@ namespace AsyncLoadWebsiteWpf
         {
             Websites.Clear();
             Websites.Add(new WebsiteModel { Url = "http://www.nu.nl" });
-            Websites.Add(new WebsiteModel { Url = "https://www.reddit.com" });
+            Websites.Add(new WebsiteModel { Url = "https://www.avans.nl" });
             Websites.Add(new WebsiteModel { Url = "https://brightspace.avans.nl" });
             Websites.Add(new WebsiteModel { Url = "https://github.com/avansti" });
             Websites.Add(new WebsiteModel { Url = "https://www.google.com" });
